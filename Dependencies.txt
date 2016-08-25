@@ -1,0 +1,8 @@
+Installed:
+
+python3-pyqt5
+python3-pyqt5.qtmultimedia
+
+lirc -- look at https://stavros.io/posts/how-turn-your-raspberry-pi-infrared-remote-control/ for how to configure lirc.
+Got lircd.conf for LG_AKB74475433 remote from https://sourceforge.net/p/lirc-remotes/mailman/message/34576646/
+

@@ -15,9 +15,9 @@ class MainWindow(QWidget):
 	def __init__(self):
 		super().__init__()
 
-		#palette = QPalette()
-		#palette.setColor(QPalette.Window, Qt.black)
-		#self.setPalette(palette)
+		palette = QPalette()
+		palette.setColor(QPalette.Window, Qt.black)
+		self.setPalette(palette)
 
 		self.clock = Clock()
 
