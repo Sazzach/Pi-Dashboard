@@ -24,7 +24,7 @@ class MainWindow(QWidget):
 
 		vlayout = QVBoxLayout()
 		vlayout.addWidget(self.clock, 2, Qt.AlignVCenter)
-		self.clock.setFixedSize(800, 200)
+		self.clock.setFixedSize(600, 200)
 
 		hlayout = QHBoxLayout()
 		hlayout.addLayout(vlayout)
@@ -35,7 +35,7 @@ class MainWindow(QWidget):
 
 class Clock(QLCDNumber):
 	def __init__(self, QParent = None):
-		super().__init__(8, QParent)
+		super().__init__(5, QParent)
 
 		self.timer = QTimer()
 		self.timer.setInterval(1000)
@@ -46,9 +46,10 @@ class Clock(QLCDNumber):
 
 	def update(self):
 		time = QDateTime.currentDateTime()
-		self.display(time.toString('hh:mm:ss'))
+		self.display(time.toString('hh:mm'))
 
 if __name__ == '__main__':
 	app = QApplication(sys.argv)
+	app.setOverrideCursor(Qt.BlankCursor)
 	win = MainWindow()
 	sys.exit(app.exec_())
