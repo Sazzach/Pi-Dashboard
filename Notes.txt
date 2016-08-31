@@ -1,0 +1,2 @@
+Added script to init.d called noip_startup to automatically run noip when the
+pi boots.
